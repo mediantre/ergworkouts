@@ -113,28 +113,60 @@
             <div class="col-md-12">
                 <h3 class="text-center">Workout of the Day</h3>
                 <div class="workout-box">
-                    <p>{{ workout_of_the_day }}</p>
+                    <p>Sample Workout of the Day</p>
                 </div>
             </div>
         </div>
         <hr>
-        {% for workout_type, workouts in workout_groups.items() %}
+        
         <div class="row">
             <div class="col-md-12">
-                <h3>{{ workout_type }} Duration Workouts</h3>
+                <h3>Short Duration Workouts</h3>
                 <ul class="workout-list">
-                    {% for workout in workouts %}
+                    
                     <li>
-                        <strong>{{ workout.title }}</strong>
-                        <p>{{ workout.description }}</p>
-                        <p>Heart Rate Zone: {{ workout.heart_rate_zone }}</p>
-                        <p>Total Time: {{ workout.total_time }}</p>
+                        <strong>2 x 2000m rate increase</strong>
+                        <p>Row two 2000 meter pieces...</p>
+                        <p>Heart Rate Zone: 75-85%</p>
+                        <p>Total Time: 20 minutes</p>
                     </li>
-                    {% endfor %}
+                    
                 </ul>
             </div>
         </div>
-        {% endfor %}
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Medium Duration Workouts</h3>
+                <ul class="workout-list">
+                    
+                    <li>
+                        <strong>Medium Workout 1</strong>
+                        <p>Description for medium workout...</p>
+                        <p>Heart Rate Zone: 70-80%</p>
+                        <p>Total Time: 40 minutes</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Long Duration Workouts</h3>
+                <ul class="workout-list">
+                    
+                    <li>
+                        <strong>Long Workout 1</strong>
+                        <p>Description for long workout...</p>
+                        <p>Heart Rate Zone: 65-75%</p>
+                        <p>Total Time: 60 minutes</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
