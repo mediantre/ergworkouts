@@ -52,6 +52,23 @@
             animation: bounce 2s infinite;
         }
 
+        .duration-navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .duration-navbar a {
+            text-decoration: none;
+            color: #343a40;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .duration-navbar a:last-child {
+            margin-right: 0;
+        }
+
         @keyframes bounce {
 
             0%,
@@ -109,6 +126,11 @@
             <img src="erg_image.jpeg" alt="Erg" class="erg-img">
             <h1>Erg Workouts</h1>
         </header>
+        <nav class="duration-navbar">
+            <a href="#short-duration">Short</a>
+            <a href="#medium-duration">Medium</a>
+            <a href="#long-duration">Long</a>
+        </nav>
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center">Workout of the Day</h3>
@@ -119,7 +141,7 @@
         </div>
         <hr>
         {% for workout_type, workouts in workout_groups.items() %}
-        <div class="row">
+        <div class="row" id="{{ workout_type|lower }}-duration">
             <div class="col-md-12">
                 <h3>{{ workout_type }} Duration Workouts</h3>
                 <ul class="workout-list">

@@ -52,6 +52,23 @@
             animation: bounce 2s infinite;
         }
 
+        .duration-navbar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .duration-navbar a {
+            text-decoration: none;
+            color: #343a40;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .duration-navbar a:last-child {
+            margin-right: 0;
+        }
+
         @keyframes bounce {
 
             0%,
@@ -109,6 +126,11 @@
             <img src="erg_image.jpeg" alt="Erg" class="erg-img">
             <h1>Erg Workouts</h1>
         </header>
+        <nav class="duration-navbar">
+            <a href="#short-duration">Short</a>
+            <a href="#medium-duration">Medium</a>
+            <a href="#long-duration">Long</a>
+        </nav>
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center">Workout of the Day</h3>
@@ -119,14 +141,14 @@
         </div>
         <hr>
         
-        <div class="row">
+        <div class="row" id="short-duration">
             <div class="col-md-12">
                 <h3>Short Duration Workouts</h3>
                 <ul class="workout-list">
                     
                     <li>
                         <strong>2 x 2000m rate increase</strong>
-                        <p>Row two 2000 meter pieces...</p>
+                        <p>2 x 2000m rate increase / 4 min easy  @2k + 8-10 (can go less at higher spm). <br> Row two 2000 meter pieces. In each piece, row the first 1000 meters @ 26 spm. Then 500 meters @ 28 spm, 250 meters @ 30 spm and 250 meters @ 32 spm. Row for four minutes at light pressure during the rest period.</p>
                         <p>Heart Rate Zone: 75-85%</p>
                         <p>Total Time: 20 minutes</p>
                     </li>
@@ -135,7 +157,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row" id="medium-duration">
             <div class="col-md-12">
                 <h3>Medium Duration Workouts</h3>
                 <ul class="workout-list">
@@ -151,7 +173,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row" id="long-duration">
             <div class="col-md-12">
                 <h3>Long Duration Workouts</h3>
                 <ul class="workout-list">
