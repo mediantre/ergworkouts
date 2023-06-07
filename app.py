@@ -33,9 +33,11 @@ workout_groups = {
     ],
 }
 
+workout_of_the_day = "6 x 500m / 2:00 rest"
+
 @app.route('/')
 def index():
-    return render_template('erg_workouts.html', workout_groups=workout_groups, workout_of_the_day="Sample Workout of the Day")
+    return render_template('erg_workouts.html', workout_groups=workout_groups, workout_of_the_day=workout_of_the_day)
 
 if __name__ == '__main__':
     app.run(debug=True)

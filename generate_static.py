@@ -12,7 +12,7 @@ template = env.get_template("erg_workouts.html")
 workout_groups = app.workout_groups
 
 # Render the template with the workout data
-static_html = template.render(workout_groups=workout_groups, workout_of_the_day="Sample Workout of the Day")
+static_html = template.render(workout_groups=workout_groups, workout_of_the_day=app.workout_of_the_day)
 
 # Write the rendered template to a static HTML file
 with open("index.html", "w") as f:
