@@ -366,7 +366,7 @@ workout_groups = {
     ],
 }
 
-workout_of_the_day = "6 x 500m / 2:00 rest"
+workout_of_the_day = "6 x 500m / 2:00 rest @2k-2-3. Goal is to hold the same split for all 6 pieces- DONT FLY AND DIE. Rate: Open"
 
 @app.route('/')
 def index():
