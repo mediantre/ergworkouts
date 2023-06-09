@@ -6,127 +6,363 @@ app = Flask(__name__)
 workout_groups = {
     "Short": [
         {
-            "title": "5 x 500m, 2’ easy paddle",
-            "description": "5 x 500m, 2’ easy paddle (no stop) @2k-3",
+            "title": "5 x 500m, 2' easy paddle",
+            "description": "5 x 500m, 2' easy paddle (no stop) @2k-3",
             "heart_rate_zone": "AT",
-            "total_time": "~18’ + WU/CD"
+            "total_time": "~18' + WU/CD"
         },
 
         {
             "title": "5000m with rate changes",
             "description": "5000m with rate changes every 1000m: 25-22-25-28-25",
             "heart_rate_zone": "UT1",
-            "total_time": "~20’"
+            "total_time": "~20'"
         },
 
         {
             "title": "5 x 3 min / 1 min easy",
             "description": "5 x 3 min / 1 min easy @ 2k + 4",
             "heart_rate_zone": "AT",
-            "total_time": "~20’ + WU/CD"
+            "total_time": "~20' + WU/CD"
         },
 
         {
             "title": "Stroke pyramid",
             "description": "Stroke pyramid: 10/20/30/40/50/40/30/20/10 Take 10 strokes hard followed by 10 light. Then take 20 strokes hard followed by 20 light. 30 hard, 30 light. 40-40. 50-50. 40-40. 30-30. 20-20. 10-10 (hard @2k, easy paddle)",
             "heart_rate_zone": "UT1",
-            "total_time": "~20’ + WU/CD"
+            "total_time": "~20' + WU/CD"
         },
 
         {
             "title": "2 x 2000m rate increase",
             "description": "2 x 2000m rate increase / 4 min easy @2k + 8-10 (can go less at higher spm). Row two 2000 meter pieces. In each piece, row the first 1000 meters @ 26 spm. Then 500 meters @ 28 spm, 250 meters @ 30 spm and 250 meters @ 32 spm. Row for four minutes at light pressure during the rest period.",
             "heart_rate_zone": "UT1",
-            "total_time": "~22’ + WU/CD"
+            "total_time": "~22' + WU/CD"
         },
 
         {
             "title": "21 minutes with rate increase",
             "description": "21 minutes with rate increase @ 2k + 18-20 (decreasing time by 2 sec every rate increase) Row the first six minutes @ 20 spm. Then row five minutes @ 22 spm, four @ 24, three @ 26, two @ 28 and one @ 30.",
             "heart_rate_zone": "UT1-AT",
-            "total_time": "21’ + WU/CD"
+            "total_time": "21' + WU/CD"
         },
 
         {
             "title": "4 x 1000m / 1 min easy/rest",
             "description": "4 x 1000m / 1 min easy/rest @ 2k + 6-8",
             "heart_rate_zone": "UT1",
-            "total_time": "20’ + WU/CD"
+            "total_time": "20' + WU/CD"
         },
 
         {
-            "title": "6x500m / 2’ rest",
-            "description": "6x500m / 2’ rest @ 2k - 1-3. Every time you do this remove 15” rest (like separate days)",
+            "title": "6x500m / 2' rest",
+            "description": "6x500m / 2' rest @ 2k - 1-3. Every time you do this remove 15” rest (like separate days)",
             "heart_rate_zone": "AT",
-            "total_time": "20’ + WU/CD"
+            "total_time": "20' + WU/CD"
         },
 
         {
             "title": "10 x 1 min / 1 min easy",
             "description": "10 x 1 min / 1 min easy @ 2k - 3-4",
             "heart_rate_zone": "AN",
-            "total_time": "20’ + WU/CD"
+            "total_time": "20' + WU/CD"
         },
 
         {
             "title": "13 x 30” flat out",
-            "description": "13 x 30” flat out with 15” rest (so 6:30 total work) - up to 3 sets with 4’ rest between them",
+            "description": "13 x 30” flat out with 15” rest (so 6:30 total work) - up to 3 sets with 4' rest between them",
             "heart_rate_zone": "AN",
-            "total_time": "15’ - 25’ + WU/CD"
+            "total_time": "15' - 25' + WU/CD"
         },
 
         {
-            "title": "30’ @ 2k + 10-14",
-            "description": "30’ @ 2k + 10-14",
+            "title": "30' @ 2k + 10-14",
+            "description": "30' @ 2k + 10-14",
             "heart_rate_zone": "UT1",
-            "total_time": "30’"
+            "total_time": "30'"
         },
 
         {
-            "title": "5x (1’ @2k + 2, 1’ @2k - 2)",
-            "description": "5x (1’ @2k + 2, 1’ @2k - 2). 90” rest in between each round.",
+            "title": "5x (1' @2k + 2, 1' @2k - 2)",
+            "description": "5x (1' @2k + 2, 1' @2k - 2). 90” rest in between each round.",
             "heart_rate_zone": "AT",
-            "total_time": "17.5’ + WU/CD"
+            "total_time": "17.5' + WU/CD"
         },
 
         {
             "title": "10 bullet",
-            "description": "10 bullet (10x 1’ @2k- 2-4 with 1’ rest)",
+            "description": "10 bullet (10x 1' @2k- 2-4 with 1' rest)",
             "heart_rate_zone": "AN",
-            "total_time": "20’ + WU/CD"
+            "total_time": "20' + WU/CD"
         },
 
         {
-            "title": "1/2/3/4/5/6’ with 1’ rest",
-            "description": "1/2/3/4/5/6’ with 1’ rest @2k + 4-8",
+            "title": "1/2/3/4/5/6' with 1' rest",
+            "description": "1/2/3/4/5/6' with 1' rest @2k + 4-8",
             "heart_rate_zone": "AT",
-            "total_time": "26’"
+            "total_time": "26'"
         },
 
         {
             "title": "Ergocalypse",
-            "description": "Ergocalypse [14 x 250m @ 2k - 3-4 with 1’ rest. Open Rate.]",
+            "description": "Ergocalypse [14 x 250m @ 2k - 3-4 with 1' rest. Open Rate.]",
             "heart_rate_zone": "AN",
-            "total_time": "30’ + WU/CD"
+            "total_time": "30' + WU/CD"
         }
     ],
     "Medium": [
         {
-            "title": "Medium Workout 1",
-            "description": "Description for medium workout...",
-            "heart_rate_zone": "70-80%",
+            "title": "2x 19' pyramids/ 3' rest",
+            "description": "2x 19' pyramids/ 3' rest: <br> [4' @18sr, 3' @20sr, 2' @22sr, 1' @24sr, 2'@22sr, 3'@20sr, 4'@18sr] x 2 <br> 3' rest. Keep a consistent split between pieces",
+            "heart_rate_zone": "UT1",
+            "total_time": "~42 minutes"
+        },
+
+        {
+            "title": "10,000m with rate changes",
+            "description": "10,000m with rate changes every 2000m: <br> 24-22-24-26-24 @2K + 15-25",
+            "heart_rate_zone": "UT2/UT1",
+            "total_time": "~45 minutes"
+        },
+
+        {
+            "title": "8 x 500m / 2 min rest",
+            "description": "8 x 500m / 2 min rest @2k +1-2: <br> Perform eight 500m pieces with a 2-minute rest period between each piece.",
+            "heart_rate_zone": "AT",
+            "total_time": "~30 minutes + WU/CD"
+        },
+
+        {
+            "title": "4 x 2000m / 2 min rest",
+            "description": "4 x 2000m / 2 min rest @2k+5-10: <br> Perform four 2000m pieces with a 2-minute rest period between each piece.",
+            "heart_rate_zone": "UT1",
+            "total_time": "~35 minutes"
+        },
+
+        {
+            "title": "5 x 1500m / 1' paddle",
+            "description": "5 x 1500m / 1' paddle @2k + 12-16: <br> Perform five 1500m pieces with a 1-minute paddle between each piece.",
+            "heart_rate_zone": "UT1",
+            "total_time": "~45 minutes"
+        },
+
+        {
+            "title": "2 x 12 min / 6' easy",
+            "description": "2 x 12 min / 6' easy @2k + 10: <br> Perform two 12-minute pieces with a 6-minute easy row between each piece.",
+            "heart_rate_zone": "UT1",
+            "total_time": "~30 minutes"
+        },
+
+        {
+            "title": "6 x 3 min / 3' easy",
+            "description": "6 x 3 min / 3' easy @2k + 2: <br> Perform six 3-minute pieces with a 3-minute easy row between each piece.",
+            "heart_rate_zone": "AT",
+            "total_time": "~36 minutes + WU/CD"
+        },
+
+        {
+            "title": "10000m @16-22spm",
+            "description": "10000m @16-22spm: <br> Row a 10,000m piece at a stroke rate between 16 and 22 spm.",
+            "heart_rate_zone": "UT2",
+            "total_time": "~45 minutes"
+        },
+
+        {
+            "title": "30' Time Trial",
+            "description": "30' Time Trial: <br> Row as far as you can in 30 minutes.",
+            "heart_rate_zone": "UT1",
+            "total_time": "30 minutes + WU/CD"
+        },
+
+        {
+            "title": "5 x 5 min / 2 min easy",
+            "description": "5 x 5 min / 2 min easy @2k + 6-12: <br> Perform five 5-minute pieces with a 2-minute easy row between each piece.",
+            "heart_rate_zone": "UT1",
+            "total_time": "35 minutes + WU/CD"
+        },
+
+        {
+            "title": "40' @ 2k + 20-30",
+            "description": "40' @ 2k + 20-30: <br> Row for 40 minutes at a pace 20-30 seconds slower than your 2k pace.",
+            "heart_rate_zone": "UT2",
             "total_time": "40 minutes"
         },
-        # Other medium workouts...
+
+        {
+            "title": "Erg Assault",
+            "description": "Erg Assault [6 x 1000m / 3 min' @ 2k + 4-5. Open Rate]: <br> Perform six 1000m pieces with a 3-minute rest between each piece.",
+            "heart_rate_zone": "AT",
+            "total_time": "40 minutes"
+        },
+
+        {
+            "title": "2 x 20', 1' rest",
+            "description": "2 x 20', 1' rest. @2k + 20-30: <br> Perform two 20-minute pieces with a 1-minute rest between each piece.",
+            "heart_rate_zone": "UT2",
+            "total_time": "41 minutes"
+        },
+
+        {
+            "title": "6000 m, harder strokes",
+            "description": "6000 m, taking 10 harder strokes at the beginning of each 500 m: <br> Row a 6000m piece with an increased intensity for the first 10 strokes of each 500m.",
+            "heart_rate_zone": "UT1",
+            "total_time": "~25 minutes"
+        },
+
+        {
+            "title": "2x 15' pyramid, 2' rest",
+            "description": "2x 15' pyramid, 2' rest: <br> Perform two 15-minute pyramid pieces with a 2-minute rest between each piece.",
+            "heart_rate_zone": "UT1",
+            "total_time": "~32 minutes"
+        },
+
+        {
+            "title": "Quadzilla",
+            "description": "Quadzilla [4x4', 3' rest @2k + 0-4. Open Rate]: <br> Perform four 4-minute pieces with a 3-minute rest between each piece.",
+            "heart_rate_zone": "AN",
+            "total_time": "28 minutes + WU/CD"
+        },
+
+        {
+            "title": "20 x 1:40 on, 20\" off",
+            "description": "20 x 1:40 on (sr > 30), 20\" off (paddle): <br> Perform 20 intervals of 1:40 at a stroke rate greater than 30 with a 20-second paddle between intervals.",
+            "heart_rate_zone": "AT",
+            "total_time": "40 minutes + WU/CD"
+        },
+
+        {
+            "title": "7 X [3 min @ 22 spm, 2 min @ 25, 1 min @ 28], 2' rest",
+            "description": "7 X [3 min @ 22 spm, 2 min @ 25, 1 min @ 28], 2' rest between sets: <br> Perform seven intervals of 3 minutes at 22 spm, 2 minutes at 25 spm, and 1 minute at 28 spm, with a 2-minute rest between each set.",
+            "heart_rate_zone": "AT",
+            "total_time": "56 minutes + WU/CD"
+        },
+
+        {
+            "title": "Speed/endurance intervals",
+            "description": "Row 6 sets of 3min on/1 min off/ 90s on/ 30s off: <br> The 3 min intervals @24-26sr, the 90s intervals @ 26-30sr.",
+            "heart_rate_zone": "UT1",
+            "total_time": "36 minutes + WU/CD"
+        },
+
+        {
+            "title": "(20 bullet) 20x 1' on, 1' rest",
+            "description": "(20 bullet) 20x 1' on, 1' rest. @2K - 0-2: <br> Perform twenty 1-minute intervals with a 1-minute rest between each interval.",
+            "heart_rate_zone": "AT",
+            "total_time": "42 minutes + WU/CD"
+        },
+
+        {
+            "title": "Death on a Stick",
+            "description": "Death on a Stick [5x5'. SR 22, 24, 26, Open, 26 ALL OUT. 5' rest after each one. @2k + 4-6]: <br> Perform five 5-minute pieces with a 5-minute rest between each piece. Stroke rates: 22, 24, 26, Open, 26 ALL OUT.",
+            "heart_rate_zone": "AT",
+            "total_time": "50 minutes + WU/CD"
+        },
     ],
     "Long": [
         {
-            "title": "Long Workout 1",
-            "description": "Description for long workout...",
-            "heart_rate_zone": "65-75%",
+            "title": "50’ @ 2k + 20-30",
+            "description": "50’ @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "50 minutes"
+        },
+
+        {
+            "title": "12000m @2k + 20-30",
+            "description": "Row a 12,000m piece @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "~54 minutes"
+        },
+
+        {
+            "title": "2 x 25’ @ 2k + 10-16, 2’ rest",
+            "description": "Piece 1: Row for 25 minutes @2k + 10-16, with a 20-22 stroke rate. <br> Piece 2: Row the same distance as piece 1, with a goal to complete it in under 25 minutes.",
+            "heart_rate_zone": "UT2",
+            "total_time": "~52 minutes"
+        },
+
+        {
+            "title": "60’ @2k +20-30",
+            "description": "Row for 60 minutes @2k + 20-30",
+            "heart_rate_zone": "UT2",
             "total_time": "60 minutes"
         },
-        # Other long workouts...
+
+        {
+            "title": "60’ @2k + 10-20",
+            "description": "Row for 60 minutes @2k + 10-20",
+            "heart_rate_zone": "UT1",
+            "total_time": "60 minutes"
+        },
+
+        {
+            "title": "4-6-8-10-8-6-4 min pyramid / 2’ rest @2k + 15-20",
+            "description": "Row a pyramid: 4 minutes on, 2 minutes rest, 6 minutes on, 2 minutes rest, 8 minutes on, 2 minutes rest, 10 minutes on, 2 minutes rest, 8 minutes on, 2 minutes rest, 6 minutes on, 2 minutes rest, 4 minutes on. @2k + 15-20",
+            "heart_rate_zone": "UT2",
+            "total_time": "60 minutes"
+        },
+
+        {
+            "title": "2x 30’, 2’ rest @ 2k + 20-30",
+            "description": "Row two 30-minute pieces with a 2-minute rest between each piece @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "62 minutes"
+        },
+
+        {
+            "title": "15000m @ 2k + 20-30",
+            "description": "Row a 15,000m piece @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "~65 minutes"
+        },
+
+        {
+            "title": "3 x 5000m / 2’ rest @2k + 15-25",
+            "description": "Row three 5,000m pieces with a 2-minute rest between each piece @2k + 15-25",
+            "heart_rate_zone": "UT2",
+            "total_time": "~70 minutes"
+        },
+
+        {
+            "title": "5 x 12’ / 3’ easy/rest as needed @2k+15-25",
+            "description": "Row five 12-minute pieces with a 3-minute easy row or rest between each piece @2k + 15-25",
+            "heart_rate_zone": "UT2",
+            "total_time": "75 minutes"
+        },
+
+        {
+            "title": "5K on, 5’ paddle. 4K on, 4’ paddle. 3K on, 3’ off. 2K on, 2’ paddle. 1K on, 1’ paddle. On@2K + 10-20",
+            "description": "Row a 5K piece, then a 5-minute paddle, a 4K piece, then a 4-minute paddle, a 3K piece, then a 3-minute rest, a 2K piece, then a 2-minute paddle, and a 1K piece, then a 1-minute paddle. On@2K + 10-20",
+            "heart_rate_zone": "UT2",
+            "total_time": "~75 minutes"
+        },
+
+        {
+            "title": "80’ @ 2k + 20-30",
+            "description": "Row for 80 minutes @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "80 minutes"
+        },
+
+        {
+            "title": "2 x 10,000m / 3’ rest @2k + 20-30",
+            "description": "Row two 10,000m pieces with a 3-minute rest between each piece @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "~90 minutes"
+        },
+
+        {
+            "title": "4 x 5000m / 2’ rest @2k + 20-30",
+            "description": "Row four 5,000m pieces with a 2-minute rest between each piece @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "~90 minutes"
+        },
+
+        {
+            "title": "Half Marathon (21097m) @2k + 20-30",
+            "description": "Row a half marathon (21,097m) @2k + 20-30",
+            "heart_rate_zone": "UT2",
+            "total_time": "~100 minutes"
+        },
     ],
 }
 
