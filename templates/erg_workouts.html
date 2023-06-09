@@ -163,6 +163,14 @@
             </div>
         </div>
         <hr>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>Random Workout</h3>
+                <button class="btn btn-primary" id="random-workout-btn">Generate Random Workout</button>
+                <div class="workout-box" id="random-workout" style="display: none; margin-top: 20px;"></div>
+            </div>
+        </div>
+        <hr>
         {% for workout_type, workouts in workout_groups.items() %}
         <div class="row" id="{{ workout_type|lower }}-duration">
             <div class="col-md-12">
@@ -181,10 +189,44 @@
         </div>
         {% endfor %}
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- New script for the random workout button -->
+    <script>
+        // Get the random workout button
+        const randomWorkoutBtn = document.getElementById("random-workout-btn");
+
+        // When the button is clicked, generate a random workout
+        randomWorkoutBtn.addEventListener("click", function () {
+            // Get the workout groups
+            const workoutGroups = {{ workout_groups| tojson
+        }};
+        const allWorkouts = [];
+
+        // Create an array of all workouts
+        for (const key in workoutGroups) {
+            allWorkouts.push(...workoutGroups[key]);
+        }
+
+        // Pick a random workout
+        const randomIndex = Math.floor(Math.random() * allWorkouts.length);
+        const randomWorkout = allWorkouts[randomIndex];
+
+
+
+        // Display the random workout
+        const randomWorkoutBox = document.getElementById("random-workout");
+        randomWorkoutBox.style.display = "block";
+        randomWorkoutBox.innerHTML = `
+            <strong>${randomWorkout.title}</strong>
+            <p>${randomWorkout.description}</p>
+            <p>Heart Rate Zone: ${randomWorkout.heart_rate_zone}</p>
+            <p>Total Time: ${randomWorkout.total_time}</p>
+        `;
+        });
+    </script>
 </body>
 
 </html>
