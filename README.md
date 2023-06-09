@@ -2,4 +2,8 @@
 Erg 4 Life
 
 ## Installation
-erho
+
+For static site
+`python generate_static.py`
+For dynamic site
+`python app.py`
