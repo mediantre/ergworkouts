@@ -1,6 +1,9 @@
 # erg4life
 Erg 4 Life
 
+## Website
+https://erg4.life
+
 ## Installation
 
 For static site
