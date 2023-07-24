@@ -25,6 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install Jinja2
         pip install Flask
+        pip install requests
 
     - name: Run generate_static.py
       run: |
