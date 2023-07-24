@@ -3,6 +3,9 @@ name: Build and Deploy to GitHub Pages
 on:
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight (UTC)
+  push:
+    branches:
+      - main  # Replace 'main' with your default branch if different
 
 jobs:
   build_and_deploy:
