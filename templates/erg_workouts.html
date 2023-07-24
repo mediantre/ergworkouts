@@ -192,6 +192,7 @@
         <a href="#short-duration">Short</a>
         <a href="#medium-duration">Medium</a>
         <a href="#long-duration">Long</a>
+        <a href="#c2-wod">Concept2 Workout of the Day</a>
     </div>
     <div class="container">
         <header class="header" id="home">
@@ -210,7 +211,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>Random Workout</h3>
-                <button class="btn btn-primary" id="random-workout-btn">Generate Random Workout</button>
+                <button class="btn btn-primary" id="random-workout-btn">Pick Random Workout</button>
                 <div class="workout-box" id="random-workout" style="display: none; margin-top: 20px;"></div>
             </div>
         </div>
@@ -232,6 +233,15 @@
             </div>
         </div>
         {% endfor %}
+        <hr>
+        <div class="row" id="c2-wod">
+            <div class="col-md-12">
+                <h3>Concept2 Workout of the Day</h3>
+                <div class="workout-box">
+                    <p>{{ c2_workout_of_the_day }}</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
