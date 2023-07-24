@@ -52,6 +52,14 @@
             border-radius: 5px;
         }
 
+        .workout-box {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
         .header {
             text-align: center;
             padding: 20px 0;
@@ -192,6 +200,7 @@
         <a href="#short-duration">Short</a>
         <a href="#medium-duration">Medium</a>
         <a href="#long-duration">Long</a>
+        <a href="#c2-wod">Concept2 Workout of the Day</a>
     </div>
     <div class="container">
         <header class="header" id="home">
@@ -202,7 +211,10 @@
             <div class="col-md-12">
                 <h3 class="text-center">Workout of the Day</h3>
                 <div class="workout-box">
-                    <p>6 x 500m / 2:00 rest @2k-2-3. Goal is to hold the same split for all 6 pieces- DONT FLY AND DIE. Rate: Open</p>
+                    <p>5 x 3 min / 1 min easy ‚óã 
+Description: 5 x 3 min / 1 min easy @ 2k + 4 ‚óã 
+Heart Rate Zone: AT ‚óã 
+Total Time: ~20' + WU/CD</p>
                 </div>
             </div>
         </div>
@@ -210,7 +222,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>Random Workout</h3>
-                <button class="btn btn-primary" id="random-workout-btn">Generate Random Workout</button>
+                <button class="btn btn-primary" id="random-workout-btn">Pick Random Workout</button>
                 <div class="workout-box" id="random-workout" style="display: none; margin-top: 20px;"></div>
             </div>
         </div>
@@ -272,7 +284,7 @@
                     
                     <li>
                         <strong>6x500m / 2' rest</strong>
-                        <p>6x500m / 2' rest @ 2k - 1-3. Every time you do this remove 15î rest (like separate days)</p>
+                        <p>6x500m / 2' rest @ 2k - 1-3. Every time you do this remove 15‚Äù rest (like separate days)</p>
                         <p>Heart Rate Zone: AT</p>
                         <p>Total Time: 20' + WU/CD</p>
                     </li>
@@ -285,8 +297,8 @@
                     </li>
                     
                     <li>
-                        <strong>13 x 30î flat out</strong>
-                        <p>13 x 30î flat out with 15î rest (so 6:30 total work) - up to 3 sets with 4' rest between them</p>
+                        <strong>13 x 30‚Äù flat out</strong>
+                        <p>13 x 30‚Äù flat out with 15‚Äù rest (so 6:30 total work) - up to 3 sets with 4' rest between them</p>
                         <p>Heart Rate Zone: AN</p>
                         <p>Total Time: 15' - 25' + WU/CD</p>
                     </li>
@@ -300,7 +312,7 @@
                     
                     <li>
                         <strong>5x (1' @2k + 2, 1' @2k - 2)</strong>
-                        <p>5x (1' @2k + 2, 1' @2k - 2). 90î rest in between each round.</p>
+                        <p>5x (1' @2k + 2, 1' @2k - 2). 90‚Äù rest in between each round.</p>
                         <p>Heart Rate Zone: AT</p>
                         <p>Total Time: 17.5' + WU/CD</p>
                     </li>
@@ -614,6 +626,15 @@
             </div>
         </div>
         
+        <hr>
+        <div class="row" id="c2-wod">
+            <div class="col-md-12">
+                <h3>Concept2 Workout of the Day</h3>
+                <div class="workout-box">
+                    <p>Intervals of 10, 20, 30, 40, 50 and 60 Calories, with one minute rest between.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
