@@ -22,7 +22,6 @@ workout_of_the_day = "{} ○ \nDescription: {} ○ \nHeart Rate Zone: {} ○ \nT
 
 
 # https://api-v4.concept2.com/wod/today
-
 c2_workout_of_the_day = json.loads(requests.get('https://api-v4.concept2.com/wod/today').text)["description"]["en"]
 
 @app.route('/')
