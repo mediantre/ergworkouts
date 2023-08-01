@@ -17,7 +17,7 @@ This website is generated through a [GitHub Action cronjob](https://github.com/m
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See [contributing.md](contributing.md) for ways to get started.
 
 ## Acknowledgements
 
