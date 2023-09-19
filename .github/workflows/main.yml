@@ -16,8 +16,11 @@ permissions:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
+    - name: Install CA Certificates
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ca-certificates
     - name: Checkout repository
       uses: actions/checkout@v2
 
