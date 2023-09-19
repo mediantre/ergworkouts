@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import requests
 import json
 import random
+import logging
 
 app = Flask(__name__)
 
@@ -22,7 +23,29 @@ workout_of_the_day = "{} ○ \nDescription: {} ○ \nHeart Rate Zone: {} ○ \nT
 
 
 # https://api-v4.concept2.com/wod/today
-c2_workout_of_the_day = json.loads(requests.get('https://api-v4.concept2.com/wod/today').text)["description"]["en"]
+
+try:
+    response = requests.get('https://api-v4.concept2.com/wod/today')
+    response.raise_for_status()  # Raise an exception for HTTP errors (e.g., 404)
+    data = response.json()
+    c2_workout_of_the_day = data.get("description", {}).get("en", "No workout of the day found")
+except requests.exceptions.SSLError:
+    logging.warning("SSL Certificate Error: Trying again with certificate verification disabled.")
+    try:
+        response = requests.get('https://api-v4.concept2.com/wod/today', verify=False)
+        response.raise_for_status()
+        data = response.json()
+        c2_workout_of_the_day = data.get("description", {}).get("en", "No workout of the day found")
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error fetching data: {e}")
+        c2_workout_of_the_day = "Error fetching data"
+    except json.JSONDecodeError:
+        logging.error("Error decoding JSON response")
+        c2_workout_of_the_day = "Error decoding JSON response"
+except requests.exceptions.RequestException as e:
+    logging.error(f"Error fetching data: {e}")
+    c2_workout_of_the_day = "Error fetching data"
+
 
 @app.route('/')
 def index():
