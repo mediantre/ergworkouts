@@ -22,7 +22,6 @@ workout_of_the_day = "{} ○ \nDescription: {} ○ \nHeart Rate Zone: {} ○ \nT
 )
 
 
-# https://api-v4.concept2.com/wod/today
 
 try:
     response = requests.get('https://api-v4.concept2.com/wod/today')
