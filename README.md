@@ -1,8 +1,8 @@
-# erg4life
-Erg 4 Life
+# erg workourd 
+Erg workouts 
 
 ## Website
-https://erg4.life
+https://ergworkouts.com
 
 ## Installation
 
