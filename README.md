@@ -1,4 +1,4 @@
-# erg workourd 
+# Erg Workouts
 Erg workouts 
 
 ## Website
